@@ -1,4 +1,6 @@
-module github.com/mashedkeyboard/ybtools/v2
+module github.com/DavidTornheim/ybtools/v2
+
+//	2024-04-05  4:20 pm	DAT	changed path for fork and so that it would compile
 
 go 1.14
 
