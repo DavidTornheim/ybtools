@@ -1,5 +1,7 @@
 package ybtools
 
+//	   2024-05-05	DAT   Add debug statement to see name of file it is trying to open
+
 import (
 	"io/ioutil"
 	"log"
@@ -76,6 +78,9 @@ func setupTaskConfigFile() {
 
 	taskConfigFile, err = ioutil.ReadFile("config-" + strings.ToLower(slugify.Marshal(settings.TaskName)) + ".yml")
 	if err != nil {
+// add for debug
+		log.Println("config-" + strings.ToLower(slugify.Marshal(settings.TaskName)) + ".yml")
+//
 		log.Println("No task-specific config file found, ignoring")
 	}
 
